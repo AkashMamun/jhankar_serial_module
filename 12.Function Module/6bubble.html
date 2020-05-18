@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This Buble Action Pratice</h1>
+    <div id="container">
+        <ul id="mylist">
+            <li id="first" class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Ullam, excepturi itaque?</li>
+            <li class="item">Asperiores, quod qui.</li>
+            <li class="item">Temporibus, fuga eligendi.</li>
+            <li class="item">Nobis, reiciendis quae!</li>
+        </ul>
+        <button id="addNew">Add New Item</button>
+    </div>
+    <script>
+
+        //Event Bubble handeler
+
+        // document.getElementById('first').addEventListener("click",function(){
+        //     console.log("First item click");
+        // })
+        // document.getElementById('mylist').addEventListener("click",function(){
+        //     console.log("Ul item click");
+        // })
+        // document.getElementById('container').addEventListener("click",function(){
+        //     console.log("Container item click");
+        // })
+
+        //Event Stop propagating Handeler
+
+        //stopPropagation use for uppper bubble stop
+        //stopImmidatte propagation for every element
+
+        // document.getElementById('first').addEventListener('click',function(){
+        //     console.log("First item click");
+        //     event.stopPropagation();
+        // })
+        // document.getElementById('mylist').addEventListener('click',function(){
+        //     console.log("Ul item click");
+        //     //event.stopPropagation();
+        // })
+        // document.getElementById('container').addEventListener('click',function(){
+        //     console.log("Container item click");
+        // })
+
+        //Event delegate and purpose of event
+
+        // var items = document.getElementsByClassName('item');
+        // for (let i = 0; i < items.length; i++) {
+        //     const item = items[i];
+        //     item.addEventListener('click', function(event){
+        //         //console.log(this, event.target.innerText);
+        //        // console.log(event.target.parentNode);
+        //        event.target.parentNode.removeChild(event.target);
+        //     })
+        // }
+        // document.getElementById('addNew').addEventListener('click',function(event){
+        //     var itemParent = document.getElementById('mylist');
+        //     var newItem = document.createElement('li');
+        //     newItem.innerText = "Brand New Item";
+        //     itemParent.appendChild(newItem);
+        // })
+
+        //Add new item delet work
+
+        // document.getElementById('addNew').addEventListener('click',function(event){
+        //     var itemParent = document.getElementById('mylist');
+        //     var newItem = document.createElement('li');
+        //     newItem.innerText = "Brand New Item";
+        //     itemParent.appendChild(newItem);
+        // })
+        // document.getElementById('mylist').addEventListener('click',function(event){
+        //     //console.log(this, event.target);
+        //     event.target.parentNode.removeChild(event.target);
+        // })
+
+        //Dom and Bom Purpose
+
+        document.getElementById('addNew').addEventListener('click',function(event){
+            var itemParent = document.getElementById('mylist');
+            var newItem = document.createElement('li');
+            newItem.innerText = "Brand New Item";
+            itemParent.appendChild(newItem);
+        })
+
+
+
+    </script>
+    
+</body>
+</html>
