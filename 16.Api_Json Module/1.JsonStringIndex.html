@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Object Notation(JSON)</title>
+</head>
+<body>
+
+   <h1>Part-1</h1>
+   <h2>Javascript Object Notation(JSON)</h2> 
+
+   <script>
+
+       //1st for example
+       //const user = { id:1 , name:"Akash"}; //javascript object
+       //ata k json korar way
+       //const UserJSON = JSON.stringify(user);
+       //console output {"id":1,"name":"Akash"}
+       //JavaScript JSON korle "" double quetion a dekay
+       //console.log(UserJSON);
+
+
+        //1st real code
+
+    //     const user = {id:1 , name:"akash"};
+    //    const UserJSON= JSON.stringify(user);
+    //    console.log(UserJSON);
+
+       //2nd way string to object i Json
+
+    //    const user = {id:1 , name:"akash"};
+    //    const UserJSON= JSON.stringify(user);
+    //    console.log(UserJSON);
+
+    //    const UserFromJSON = JSON.parse(UserJSON);
+    //    console.log(UserFromJSON);
+       //output
+      // {"id":1,"name":"akash"}
+       // {id: 1, name: "akash"}
+
+       //server theke data load korar jonno JSON lage jmn suppose fb comment ber korte chacci
+
+
+       //3rd array ke object korteo JSON USE KORa  hy
+    //    const user = {
+    //        id:1 , 
+    //        name:"akash",
+    //        friendsage:[10,20,30],
+    //        friends:["mamun", "akash", "bhuiyan"]
+    //        };
+    //    const UserJSON= JSON.stringify(user);
+    //    console.log(UserJSON);
+
+    //    const UserFromJSON = JSON.parse(UserJSON);
+    //    console.log(UserFromJSON);
+
+       //4th javascript object er vitor o object reke check koret pari
+
+    //    const user = {
+    //        id:1 , 
+    //        name:"akash",
+    //        lover:{
+    //            name:"Kakon",
+    //            age: 20,
+    //            food: "tea"
+    //        },
+    //        friendsage:[10,20,30],
+    //        friends:["mamun", "akash", "bhuiyan"]
+    //        };
+    //    const UserJSON= JSON.stringify(user);
+    //    console.log(UserJSON);
+
+    //    const UserFromJSON = JSON.parse(UserJSON);
+    //    console.log(UserFromJSON);
+
+
+        //4th try again
+    //    const user ={
+    //        id:1,
+    //        name: "sobuj",
+    //        age:21,
+    //        lover:{
+    //            id:2,
+    //            name:"sathi",
+    //            age:18
+    //        },
+    //        friendsage:[10,20,30,40,50],
+    //        friends:["ticklu", "mahir", "forkan"]
+    //    };
+
+    //    const UserJson = JSON.stringify(user);
+    //    console.log(user);
+
+    //    const UserFromJSON = JSON.parse(UserJson);
+    //    console.log(UserFromJSON);
+
+       const user ={
+           id:1,
+           name: "akash",
+           age:20,
+           lover:{
+               id:2,
+               name:"kakon",
+               age:21
+           },
+           friends:[1,2,3,4,55],
+           friendsName: ["a", "b", "c"]
+       };
+
+       const jsonForm = JSON.stringify(user);
+       console.log(jsonForm);
+
+       const obJson = JSON.parse(jsonForm);
+       console.log(obJson);
+    
+
+
+
+
+   </script>
+
+    
+</body>
+</html>
