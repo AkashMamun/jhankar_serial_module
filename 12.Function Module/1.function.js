@@ -6,7 +6,6 @@
 // }
 
 
-
 // 2nd
 // nums = [1,2,3,4,5,6,7,8];
 // for (let i = 0; i < nums.length; i++) {
@@ -19,6 +18,7 @@
 //         console.log(num, ': number is odd');
 //     }
 // }
+
 
 
 // 3rd
@@ -43,6 +43,7 @@
 //         console.log(age,': This age number is odd');
 //     }
 // }
+
 
 // 4th
 // function evenify(num){
@@ -163,10 +164,12 @@
 // friends_age=[10,20,30,40,50];
 // evenOdd(friends_age);
 
-// function evenOdd(nums){
-//     for (let i = 0; i < nums.length; i++) {
-//         const num = nums[i];
+// function evenOdd(numsr){
+//     for (let i = 0; i < numsr.length; i++) {
+//         const num = numsr[i];
 //         console.log(num);
         
 //     }
 // }
+
+

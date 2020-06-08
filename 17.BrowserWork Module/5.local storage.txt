@@ -1,0 +1,8 @@
+local storage, session storage, edit storage information
+
+localStorage.setItem("isSubscribed","true")
+sessionStorage.setItem("isPlaying","true")
+
+local storage open everyone can see it. so we can't store important data like.. password. but we can store voolume setting.
+
+sessionStorage holo Broweser close korle user ki korlo seta r  dekabe na

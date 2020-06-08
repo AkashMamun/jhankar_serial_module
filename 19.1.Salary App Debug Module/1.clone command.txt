@@ -1,0 +1,17 @@
+windows command git clone
+
+git clone (paste url)
+
+or
+git clone("paste url")
+
+or
+git clone (past and remove s from https, http)
+
+
+Command theke Vs code a folder open korar jonno
+
+code .
+
+programming hero git site
+https://github.com/ProgrammingHero1/salary-app

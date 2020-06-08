@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is not confused anymore</h1>
+    <script>
+
+        // //1st
+        // const myObj = {
+        //     name: 'Kuddus Ali',
+        //     getFullName : function(){
+        //         console.log(this);
+        //         return 'Mr.' + this.name;
+        //     }
+        // }
+        // myObj.getFullName();
+
+        // //abbe akta method er object k call korte pari
+
+
+        //2nd
+        const myObj = {
+            name: 'Kuddus Ali',
+            getFullName : function(){
+                console.log(this);
+                return 'Mr.' + this.name;
+            }
+        }
+        const anotherObj ={
+            name: 'Biddut Ali'
+        }
+        anotherObj.getFullName=myObj.getFullName;
+        console.log(anotherObj.getFullName);
+        myObj.getFullName();
+        anotherObj.getFullName();
+        //amra bujlam this er kono garannty nay ata baire theke valu keo show kore
+        //abr this ta call hbe baire thke jotobar call hocce tar upor
+        
+    </script>
+</body>
+</html>

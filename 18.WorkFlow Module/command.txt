@@ -1,0 +1,34 @@
+Windows Command
+1. d: 
+(drive change korar jonno)
+
+2. cd movie
+(folder make korar jonno)
+
+3. cd ..
+(akta folder back korar jonno)
+
+4. cd ../..
+(2ta folder back korark jonno)
+
+5. cd\   
+(Sob folder theke akebare pichone aste)
+
+6. c:\windows>d:
+       d:\>cd  /d  C:\windows 
+(Drive and directory akstshe change korar jonno)
+
+7. >mkdir akash
+ (Folder creat korar jonno)
+
+8.MKDIR akash\mamun
+ (Folder er vitor folder make korar jonno)
+
+9. mkdir d:\akash 
+(c drive a achi d drive a folder make korar jonn0)
+
+10.ren akash mamun 
+(Folder rename korar jonno)
+
+11. > type nul>hello.txt
+(txt file make korar jonn0)

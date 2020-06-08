@@ -1,0 +1,6 @@
+https://developer.mozilla.org/en-US/docs/Web/API/History_API
+history
+history.back();
+history.back(-1);
+history.forward();
+history.go(3);

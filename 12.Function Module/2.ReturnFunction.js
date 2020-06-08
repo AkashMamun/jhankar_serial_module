@@ -46,7 +46,7 @@
 //     }
 // }
 // nums = [1,2,3,4,5,6,7,8,9];
-// //evenify_all(nums);
+// evenify_all(nums);
 
 
 // friends_age = [10,20,30,40,50,60];
@@ -75,7 +75,7 @@
 //     }
 // }
 // nums = [1,2,3,4,5,6,7,8,9];
-// //evenify_all(nums);
+// evenify_all(nums);
 
 
 // friends_age = [10,20,30,40,50,60];
@@ -180,6 +180,7 @@
 
 // //7th Same as check some passing variable function er vitor var name jkono kicu dewa jay jmn ami 
 // //dici numberr kintu console korar smy array nam ta function a dite hbe jmn "num"
+
 // num = [1,2,3,4,5,6];
 // var Fresult =evenOdd(num);
 // console.log(Fresult);
@@ -204,3 +205,28 @@
 //     }
 //     return result;
 // }
+
+
+function evenOddLoop(number){
+    var array = [];
+    for(let i=0; i<number.length ; i++){
+        const num1 = number[i];
+        var checkEven = evenOddCondition(num1);
+        array.push(checkEven);
+
+    }
+    return array;
+}
+function evenOddCondition(number){
+    var result;
+    if(number%2==0){
+        result= number*2;
+    }
+    else{
+        result = number;
+    }
+    return result;
+}
+nums=[1,2,3,4,5,6,7,8];
+var ans = evenOddLoop(nums);
+console.log(ans);

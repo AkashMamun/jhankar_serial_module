@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- //old Method
+    <ul>
+        <li>list item</li>
+        <li>Lorem, ipsum.</li>
+        <li>Cum, assumenda!</li>
+        <li>Aspernatur, ipsa.</li>
+        <li>Eos, amet.</li>
+        <li id="lastName">Blanditiis, cupiditate?</li>
+    </ul>
+    <script>
+        document.getElementById('lastName').addEventListener('click',function(event){
+
+        })
+    </script>
+-->
+<!--
+<ul>
+    <li>list item</li>
+    <li>Lorem, ipsum.</li>
+    <li>Cum, assumenda!</li>
+    <li>Aspernatur, ipsa.</li>
+    <li>Eos, amet.</li>
+    <li id="lastName">Blanditiis, cupiditate?</li>
+</ul>
+
+<script>
+    function itemClickHandeler(event){
+        console.log(event.target.innerText);
+
+    }
+    document.getElementById('lastName').addEventListener('click',itemClickHandeler);
+</script>
+-->
+
+
+<ul>
+    <li>list item</li>
+    <li>Lorem, ipsum.</li>
+    <li onclick="this.innerText='Someone Clicked'">Cum, assumenda!</li>
+    <li onclick="alert('Hellow Aspernature')">Aspernatur, ipsa.</li>
+    <li onclick="itemClickHandeler(event)">Eos, amet.</li>
+    <li id="lastName">Blanditiis, cupiditate?</li>
+</ul>
+
+<script>
+    function itemClickHandeler(event){
+        console.log(event.target.innerText);
+
+    }
+    document.getElementById('lastName').addEventListener('click',itemClickHandeler);
+</script>
+</body>
+</html>
