@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shopping Cart</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <section>
+      <div id="container-section" class="container">
+        <div class="cart">
+          <div class="col-md-12 col-lg-10 mx-auto">
+            <div class="cart-item">
+              <div class="row">
+                <div class="col-md-7 center-item">
+                  <img src="images/product-1.png" alt="" />
+                  <h5>iPhone 11 128GB Black</h5>
+                </div>
+
+                <div class="col-md-5 center-item">
+                  <div class="input-group number-spinner">
+                    <button id="minus-button1" class="btn btn-default">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                    <input id="input-value1" type="text" class="form-control text-center" value="1"/>
+                    <button id="plus-button1" class="btn btn-default">
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                  <h5>$<span id="mobile-price">1219</span></h5>
+                  <img src="images/remove.png" alt="" class="remove-item" />
+                </div>
+              </div>
+            </div>
+
+            <div class="cart-item">
+              <div class="row">
+                <div class="col-md-7 center-item mx-auto">
+                  <img src="images/product-2.png" alt="" />
+                  <h5>iPhone 11 Silicone Case - Black</h5>
+                </div>
+                <div class="col-md-5 center-item">
+                  <div class="input-group number-spinner">
+                    <button id="minus-button2" class="btn btn-default">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                    <input
+                      id="input-value2"
+                      type="text"
+                      class="form-control text-center"
+                      value="1"
+                    />
+                    <button id="plus-button2" class="btn btn-default">
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                  <h5>$<span id="case-price">59</span></h5>
+                  <img src="images/remove.png" alt="" class="remove-item" />
+                </div>
+              </div>
+            </div>
+
+            <div class="cart-item">
+              <div class="row">
+                <div class="col-md-8">
+                  <h5>Subtotal:</h5>
+                  <h5>Tax:2%</h5>
+                  <h5>Total:</h5>
+                </div>
+
+                <div class="col-md-4 status">
+                  <h5>$<span id="sub-total">1278</span></h5>
+                  <h5>$<span id="tax">25.56</span></h5>
+                  <h5>$<span id="total">1253</span></h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 pt-4 pb-4">
+              <button
+                id="check-out"
+                type="button"
+                class="btn btn-success check-out"
+              >
+                Check Out
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <h2 id="thanks">Thanks for purchase</h2>
+    </div>
+
+
+    <table class="table table-striped table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+    <script>
+      // plus button event handler for mobile
+      const plusBtn1 = document.getElementById('plus-button1');
+      plusBtn1.addEventListener('click', function () {
+        // iPhone input section
+        const input1 = document.getElementById('input-value1').value;
+        const input1Number = parseFloat(input1);
+
+        // mobile price section
+        const mobilePrice = document.getElementById('mobile-price').innerText;
+        const mobilePriceNumber = parseFloat(mobilePrice);
+
+        // sub-total section
+        const sub = document.getElementById('sub-total').innerText;
+        const subNumber = parseFloat(sub);
+
+        //tax section
+        const taxId = document.getElementById('tax').innerText;
+        const taxIdNumber = parseFloat(taxId);
+
+        //total section
+        const totalId = document.getElementById('total').innerText;
+        const totalIdNumber = parseFloat(totalId);
+
+        if (input1Number > 0 && mobilePriceNumber >= 1219) {
+          const increaseInput = input1Number + 1;
+          const increaseMobilePrice = mobilePriceNumber + 1219;
+          const subTotalNumber = subNumber + 1219;
+          const tax = (subTotalNumber * 2) / 100;
+          const total = subTotalNumber - tax;
+
+          document.getElementById('input-value1').value = increaseInput;
+          document.getElementById('mobile-price').innerText = increaseMobilePrice;
+          document.getElementById('sub-total').innerText = subTotalNumber;
+          document.getElementById('tax').innerText = tax;
+          document.getElementById('total').innerText = total;
+        }
+      });
+      //minus button event handler for mobile
+      const minusBtn1 = document.getElementById('minus-button1');
+      minusBtn1.addEventListener('click', function () {
+        const input1 = document.getElementById('input-value1').value;
+        const input1Number = parseFloat(input1);
+
+        const mobilePrice = document.getElementById('mobile-price').innerText;
+        const mobilePriceNumber = parseFloat(mobilePrice);
+
+        const sub = document.getElementById('sub-total').innerText;
+        const subNumber = parseFloat(sub);
+
+        const taxId = document.getElementById('tax').innerText;
+        const taxIdNumber = parseFloat(taxId);
+
+        const totalId = document.getElementById('total').innerText;
+        const totalIdNumber = parseFloat(totalId);
+
+        if (input1Number > 1 && mobilePriceNumber > 1219) {
+          const decreaseInput = input1Number - 1;
+          const decreaseMobilePrice = mobilePriceNumber - 1219;
+          const subTotalNumber = subNumber - 1219;
+          const tax = (subTotalNumber * 2) / 100;
+          const total = subTotalNumber - tax;
+
+          document.getElementById('input-value1').value = decreaseInput;
+          document.getElementById('mobile-price').innerText = decreaseMobilePrice;
+          document.getElementById('sub-total').innerText = subTotalNumber;
+          document.getElementById('tax').innerText = tax;
+          document.getElementById('total').innerText = total;
+        }
+      });
+      //plus button event handler for case
+      const plusBtn2 = document.getElementById('plus-button2');
+      plusBtn2.addEventListener('click', function () {
+        const input2 = document.getElementById('input-value2').value;
+        const input2Number = parseFloat(input2);
+
+        const casePrice = document.getElementById('case-price').innerText;
+        const casePriceNumber = parseFloat(casePrice);
+
+        const sub = document.getElementById('sub-total').innerText;
+        const subNumber = parseFloat(sub);
+
+        const taxId = document.getElementById('tax').innerText;
+        const taxIdNumber = parseFloat(taxId);
+
+        const totalId = document.getElementById('total').innerText;
+        const totalIdNumber = parseFloat(totalId);
+
+        if (input2Number > 0 && casePriceNumber >= 59) {
+          const increaseInput2 = input2Number + 1;
+          const increaseCasePrice = casePriceNumber + 59;
+          const subTotalNumber = subNumber + 59;
+          const tax = (subTotalNumber * 2) / 100;
+          const total = subTotalNumber - tax;
+
+          document.getElementById('input-value2').value = increaseInput2;
+          document.getElementById('case-price').innerText = increaseCasePrice;
+          document.getElementById('sub-total').innerText = subTotalNumber;
+          document.getElementById('tax').innerText = tax;
+          document.getElementById('total').innerText = total;
+        }
+      });
+      //minus button event handler for case
+      const minusBtn2 = document.getElementById('minus-button2');
+      minusBtn2.addEventListener('click', function () {
+        const input2 = document.getElementById('input-value2').value;
+        const input2Number = parseFloat(input2);
+
+        const casePrice = document.getElementById('case-price').innerText;
+        const casePriceNumber = parseFloat(casePrice);
+
+        const sub = document.getElementById('sub-total').innerText;
+        const subNumber = parseFloat(sub);
+
+        const taxId = document.getElementById('tax').innerText;
+        const taxIdNumber = parseFloat(taxId);
+
+        const totalId = document.getElementById('total').innerText;
+        const totalIdNumber = parseFloat(totalId);
+
+        if (input2Number > 1 && casePriceNumber > 59) {
+          const decreaseInput2 = input2Number - 1;
+          const decreaseCasePrice = casePriceNumber - 59;
+          const subTotalNumber = subNumber - 59;
+          const tax = (subTotalNumber * 2) / 100;
+          const total = subTotalNumber - tax;
+
+          document.getElementById('input-value2').value = decreaseInput2;
+          document.getElementById('case-price').innerText = decreaseCasePrice;
+          document.getElementById('sub-total').innerText = subTotalNumber;
+          document.getElementById('tax').innerText = tax;
+          document.getElementById('total').innerText = total;
+        }
+      });
+      //check out button event handler
+      const checkBtn = document.getElementById('check-out');
+      checkBtn.addEventListener('click', function () {
+        const containerSection = document.getElementById('container-section');
+        containerSection.style.display = 'none';
+
+        const thanksId = document.getElementById('thanks');
+        thanksId.style.display = 'block';
+      });
+    </script>
+  </body>
+</html>
