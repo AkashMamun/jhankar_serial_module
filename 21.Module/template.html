@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <style>
+        .user{
+            background-color: salmon;
+            border-radius: 10px;
+            margin:10px;
+            padding: 10px;
+            box-shadow:5px 5px 10px gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- <ul id="user-list">
+
+    </ul>
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then(res => res.json())
+        .then(data => showUserName(data))
+
+        function showUserName(data){
+            let lists = '';
+            data.forEach(user => {
+                lists = lists + `<li>${user.name} ; ${user.email}</li>`
+                
+            });
+            const ul = document.getElementById('user-list');
+            ul.innerHTML = lists;
+        }
+    </script> -->
+
+    <div id="user-conatiner">
+
+    </div>
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then(res => res.json())
+        .then(data => showUserName(data))
+
+        function showUserName(data){
+            let usersHTML = '';
+            data.forEach(user => {
+                usersHTML = usersHTML + `<div class="user">
+                <h2>User Name: ${user.name}</h2>
+                <p> Email: ${user.email}</p>
+                <p> Company Name: ${user.company.name},${user.company.catchPhrase}, ${user.company.bs}</p>;
+                </div>`
+                
+            });
+            const userConatiner = document.getElementById('user-conatiner');
+            userConatiner.innerHTML = usersHTML;
+        }
+    </script>
+</body>
+</html>
